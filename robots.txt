@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shiriudailha.github.io/kozy-floripa/sitemap.xml

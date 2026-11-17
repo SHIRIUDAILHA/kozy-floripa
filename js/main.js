@@ -138,9 +138,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const propertyDetail = document.querySelector('[data-property-detail]');
   if (propertyDetail) {
-    const slug = new URLSearchParams(window.location.search).get('imovel');
-    const project = projects[slug] || projects['d-verse'];
-    document.title = `${project.name} | Kozy Floripa`;
+    const requestedSlug = new URLSearchParams(window.location.search).get('imovel');
+    const slug = projects[requestedSlug] ? requestedSlug : 'd-verse';
+    const project = projects[slug];
+    const title = `${project.name} | Kozy Floripa`;
+    const description = `Conheça ${project.name}, em ${project.location}. Consulte plantas, detalhes do projeto e informações oficiais.`;
+    const canonicalUrl = new URL(window.location.href);
+    canonicalUrl.search = '';
+    canonicalUrl.searchParams.set('imovel', slug);
+    canonicalUrl.hash = '';
+    document.title = title;
+
+    let canonical = document.head.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.append(canonical);
+    }
+    canonical.href = canonicalUrl.href;
+    const descriptionMeta = document.head.querySelector('meta[name="description"]');
+    if (descriptionMeta) descriptionMeta.content = description;
+    const socialValues = {
+      'meta[property="og:title"]': title,
+      'meta[property="og:description"]': description,
+      'meta[property="og:url"]': canonicalUrl.href,
+      'meta[property="og:image"]': project.photos[0][0],
+      'meta[name="twitter:title"]': title,
+      'meta[name="twitter:description"]': description,
+      'meta[name="twitter:image"]': project.photos[0][0]
+    };
+    Object.entries(socialValues).forEach(([selector, content]) => {
+      const meta = document.head.querySelector(selector);
+      if (meta) meta.content = content;
+    });
     const gallery = propertyDetail.querySelector('[data-property-gallery]');
     propertyDetail.querySelector('[data-project-name]').textContent = project.name;
     propertyDetail.querySelector('[data-project-location]').textContent = project.location;

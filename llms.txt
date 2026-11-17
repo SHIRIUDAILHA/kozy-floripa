@@ -1,0 +1,21 @@
+# Kozy Floripa
+
+> Curadoria de empreendimentos e orientação imobiliária em Florianópolis, Santa Catarina, Brasil.
+
+## Site
+- [Início](https://shiriudailha.github.io/kozy-floripa/): apresentação da Kozy Floripa e projetos em destaque.
+- [Empreendimentos](https://shiriudailha.github.io/kozy-floripa/pages/lancamentos.html): projetos residenciais selecionados em Florianópolis.
+- [Sobre](https://shiriudailha.github.io/kozy-floripa/#sobre-title): abordagem de atendimento e curadoria local.
+- [Contato](https://shiriudailha.github.io/kozy-floripa/pages/contato.html): canais de contato.
+
+## Guias locais
+- [Russos em Florianópolis: imigração, moradia e compra de imóvel](https://shiriudailha.github.io/kozy-floripa/pages/russos-em-florianopolis.html): dados atribuídos à Prefeitura e fontes oficiais sobre compra e residência.
+- [Guia de Florianópolis](https://shiriudailha.github.io/kozy-floripa/pages/guia-florianopolis.html)
+- [Morar no Campeche](https://shiriudailha.github.io/kozy-floripa/pages/guia-campeche.html)
+- [Morar na Lagoa da Conceição](https://shiriudailha.github.io/kozy-floripa/pages/guia-lagoa.html)
+- [Centro ou norte da ilha](https://shiriudailha.github.io/kozy-floripa/pages/guia-centro-norte.html)
+- [Custos da compra de imóvel](https://shiriudailha.github.io/kozy-floripa/pages/guia-custos.html)
+- [Comprar apartamento na planta](https://shiriudailha.github.io/kozy-floripa/pages/guia-planta.html)
+
+## Machine-readable discovery
+- [XML sitemap](https://shiriudailha.github.io/kozy-floripa/sitemap.xml)
